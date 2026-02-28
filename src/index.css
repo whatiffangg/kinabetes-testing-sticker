@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Noto+Sans+Thai:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 220 20% 97%;
+    --foreground: 224 50% 18%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 224 50% 18%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 50% 18%;
+
+    --primary: 228 70% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 225 30% 94%;
+    --secondary-foreground: 224 50% 18%;
+
+    --muted: 220 20% 95%;
+    --muted-foreground: 220 10% 50%;
+
+    --accent: 228 60% 94%;
+    --accent-foreground: 228 70% 45%;
+
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 20% 92%;
+    --input: 220 20% 92%;
+    --ring: 228 70% 50%;
+
+    --radius: 1rem;
+
+    /* Kinabetes custom tokens */
+    --kina-blue: 228 70% 50%;
+    --kina-blue-light: 228 60% 94%;
+    --kina-indigo: 240 55% 55%;
+    --kina-purple: 258 60% 55%;
+    --kina-green: 152 60% 45%;
+    --kina-green-light: 152 45% 93%;
+    --kina-amber: 38 90% 55%;
+    --kina-amber-light: 38 75% 93%;
+    --kina-red: 0 72% 55%;
+    --kina-red-light: 0 55% 94%;
+    --kina-cyan: 190 70% 50%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(240 55% 55%), hsl(258 60% 55%));
+    --gradient-primary: linear-gradient(135deg, hsl(228 70% 50%), hsl(240 55% 55%));
+    --gradient-camera-btn: linear-gradient(135deg, hsl(228 70% 55%), hsl(258 60% 55%));
+
+    --shadow-card: 0 1px 8px -1px hsl(224 50% 18% / 0.06);
+    --shadow-elevated: 0 4px 20px -4px hsl(224 50% 18% / 0.1);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 224 30% 8%;
+    --foreground: 220 15% 92%;
+    --card: 224 25% 12%;
+    --card-foreground: 220 15% 92%;
+    --popover: 224 25% 12%;
+    --popover-foreground: 220 15% 92%;
+    --primary: 228 70% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 224 20% 16%;
+    --secondary-foreground: 220 15% 92%;
+    --muted: 224 15% 18%;
+    --muted-foreground: 220 10% 55%;
+    --accent: 228 40% 20%;
+    --accent-foreground: 228 70% 70%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 224 15% 20%;
+    --input: 224 15% 20%;
+    --ring: 228 70% 55%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Noto Sans Thai', 'IBM Plex Sans Thai', sans-serif;
+  }
+}
+
+@layer utilities {
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  .gradient-camera-btn {
+    background: var(--gradient-camera-btn);
+  }
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+}
